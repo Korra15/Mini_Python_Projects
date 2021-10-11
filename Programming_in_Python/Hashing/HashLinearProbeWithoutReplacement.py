@@ -1,3 +1,4 @@
+
 from collections import defaultdict
 
 count = 0
@@ -35,7 +36,8 @@ class HashLinearProbing:
                 self.hash_table[pos] = key
                 count = count + 1
                 break
-        print("Value cannot to hashed")
+        else:
+         print("Value cannot to hashed")
 
     def display(self):
         print("Hash Table Keys: (index, value)")
