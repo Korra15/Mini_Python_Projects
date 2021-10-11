@@ -20,7 +20,6 @@ class HashLinearProbing:
             if self.hash_table[index] == -1:
                 self.hash_table[index] = key
                 count = count + 1
-                print("normal = ", count)
             else:
                 self.findVacantIndex(key, index)
         else:
@@ -53,7 +52,7 @@ hash_object = HashLinearProbing(size)
 
 for _ in range(size):
     key_value = int(input("Enter key value: "))
-    index = hash_object.hashing(key_value)
+    index = hashing(key_value)
     hash_object.insertIntoHashIndexWithoutReplacement(key_value, index)
     hash_object.display()
 
